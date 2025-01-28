@@ -1,0 +1,26 @@
+backend:
+  name: github
+  repo: your-username/my-personal-website
+  branch: main
+
+media_folder: "uploads" # 存储图片的位置
+public_folder: "/uploads"
+
+collections:
+  - name: "finance-tools"
+    label: "金融平台与交易工具"
+    folder: "_finance-tools"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "标题", name: "title", widget: "string"}
+      - {label: "内容", name: "body", widget: "markdown"}
+
+  - name: "trading-strategies"
+    label: "交易策略"
+    folder: "_trading-strategies"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "标题", name: "title", widget: "string"}
+      - {label: "内容", name: "body", widget: "markdown"}
