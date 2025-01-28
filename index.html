@@ -31,12 +31,10 @@
         }
 
         main {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 2em auto;
             padding: 1.5em;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
         section {
@@ -45,16 +43,37 @@
 
         h2 {
             font-size: 1.8em;
-            margin-bottom: 0.5em;
+            margin-bottom: 1em;
         }
 
-        a {
-            color: #1a73e8;
-            text-decoration: none;
+        .modules {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
-        a:hover {
-            text-decoration: underline;
+        .module {
+            flex: 1;
+            min-width: 250px;
+            background: linear-gradient(135deg, #0073e6, #00d4ff);
+            color: white;
+            border-radius: 10px;
+            padding: 2em;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .module:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .module h3 {
+            font-size: 1.5em;
+            margin: 0;
         }
 
         footer {
@@ -73,15 +92,24 @@
     <main>
         <section>
             <h2>关于本站</h2>
-            <p>欢迎来到“文艺复兴进化论”，一个致力于分享独特虚拟资源和金融工具的平台。让我们一起探索新思路，抓住未来的无限可能。</p>
+            <p>欢迎来到“文艺复兴进化论”，一个致力于分享独特虚拟资源和金融工具的平台。</p>
         </section>
         <section>
-            <h2>资源分享</h2>
-            <ul>
-                <li><a href="https://example.com/resource1" target="_blank">资源1：最新投资工具</a></li>
-                <li><a href="https://example.com/resource2" target="_blank">资源2：经典经济学读物</a></li>
-                <li><a href="https://example.com/resource3" target="_blank">资源3：虚拟交易策略</a></li>
-            </ul>
+            <h2>精选内容</h2>
+            <div class="modules">
+                <div class="module" onclick="location.href='./finance-tools.html';">
+                    <h3>金融平台与交易工具</h3>
+                </div>
+                <div class="module" onclick="location.href='./trading-strategies.html';">
+                    <h3>交易策略</h3>
+                </div>
+                <div class="module" onclick="location.href='./side-hustles.html';">
+                    <h3>副业及虚拟资源分享</h3>
+                </div>
+                <div class="module" onclick="location.href='./miscellaneous.html';">
+                    <h3>杂谈</h3>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
